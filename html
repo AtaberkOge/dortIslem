@@ -1,0 +1,64 @@
+<html>
+    <head>
+    <title>Hesap Makinesi</title>
+<style>
+    div{
+        font-size: 12px;
+    }
+    h2 {
+        color: rgb(155, 0, 155);
+        padding: 20px;
+    }
+body {
+    font-size: 12px;
+    color: rgb(196, 29, 29);
+    background-color: #242424;
+}
+</style>
+
+
+	<script type="text/javascript">
+	function Toplama()
+	{ 
+     s1=document.getElementById("buton1").value;  
+	s2=document.getElementById("buton2").value;
+	textboxresult.value=parseInt(s1)+parseInt(s2);
+    }
+	
+    function   Cikartma()
+    { 
+         s1=document.getElementById("buton1").value;  
+	s2=document.getElementById("buton2").value;
+	textboxresult.value=parseInt(s1)-parseInt(s2)
+    }
+	function   Carpma()
+    {  
+        s1=document.getElementById("buton1").value;  
+	s2=document.getElementById("buton2").value;
+	textboxresult.value=parseInt(s1)*parseInt(s2);
+    }
+	function   Bolme()
+    {  s1=document.getElementById("buton1").value;   
+	s2=document.getElementById("buton2").value; if(s2==0) 
+	alert("Bölen sıfıra eşit olamaz.") 
+	else textboxresult.value=parseInt(s1)/parseInt(s2);}</script>
+    </head>
+    <body>
+        <h2>Dört işlem hesap makinesine hoş geldiniz.</h2>
+
+    <table>
+        <tr>
+            <td> <label>Sayı 1:</label> <input  type="text"  id="buton1" ></br> </td>
+            <td> <input type="button"  id="buttonadd" value= "+" onclick="Toplama()">
+                <input type="button"  id="buttonasub" value="-" onclick="Cikartma()">
+                <input type="button"  id="buttonamul" value="*" onclick="Carpma()">
+                <input type="button"  id="buttondiv" value="/" onclick="Bolme()"> </td>
+            <td> <label>Sayı 2:</label> <input  type="text"  id="buton2" ></br> </td>
+            <td> = </td>
+            <td> <input  type="text"  id="textboxresult" ></br> </td>
+        </tr>
+    </table>
+</br>
+
+	</body>
+    </html>
